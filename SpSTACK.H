@@ -45,13 +45,13 @@ void CreateStackList (StackList * L);
 /* FS : Terbentuk List Kosong */
 
 /**** Manajemen Memory ****/
-nodeStack Alokasi (infotype X);
+nodeStack AlokasiStack (infotype X);
 /* Mengirimkan address hasil alokasi sebuah elemen */
 /* Jika alokasi berhasil, maka address != Nil, 	   */
 /*	dan misalnya menghasilkan P, maka Info(P) = X, Next(P) = Nil */
 /* Jika alokasi gagal, mengirimkan Nil */
 
-void DeAlokasi (nodeStack P);
+void DeAlokasiStack (nodeStack P);
 /* IS : P terdefinisi */
 /* FS : P dikembalikan ke sistem */
 /* Melakukan dealokasi / pengembalian address P ke system */
@@ -65,7 +65,7 @@ void InsVLast (StackList * L, infotype X);
 
 
 /**** Penghapusan Elemen ****/
-void DelVLast (StackList * L, infotype * X);
+void DelVLastStack (StackList * L, infotype * X);
 /* IS : L TIDAK Kosong */
 /* FS : Elemen pertama List dihapus, nilai info disimpan ke X */
 /* 	dan alamat elemen pertama di dealokasi */
@@ -80,7 +80,7 @@ void InsertLast (StackList * L, nodeStack P);
 
 
 /**** Penghapusan sebuah elemen ****/
-void DelLast (StackList * L, nodeStack * P);
+void DelLastStack (StackList * L, nodeStack * P);
 /* IS : L TIDAK kosong */
 /* FS : P adalah alamat elemen pertama list sebelum penghapusan */
 /*	elemen list berkurang satu (mungkin menjadi kosong) */

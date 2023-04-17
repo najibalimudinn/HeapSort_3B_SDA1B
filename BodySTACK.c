@@ -27,7 +27,7 @@ void CreateStackList (StackList * L)
 }
 
 /**** Manajemen Memory ****/
-nodeStack Alokasi (infotype X)
+nodeStack AlokasiStack (infotype X)
 /* Mengirimkan address hasil alokasi sebuah elemen */
 /* Jika alokasi berhasil, maka address != Nil, 	   */
 /*	dan misalnya menghasilkan P, maka Info(P) = X, Next(P) = Nil */
@@ -46,7 +46,7 @@ nodeStack Alokasi (infotype X)
 	 return (P);
 }
 
-void DeAlokasi (nodeStack P)
+void DeAlokasiStack (nodeStack P)
 /* IS : P terdefinisi */
 /* FS : P dikembalikan ke sistem */
 /* Melakukan dealokasi / pengembalian address P ke system */
@@ -66,12 +66,12 @@ void InsVLast (StackList * L, infotype X)
 	 /* Kamus Lokal */
 	nodeStack P;
 	 /* Algoritma */
-	P = Alokasi (X);
+	P = AlokasiStack (X);
 	if (P != Nil)
 	{	InsertLast (&(*L), P);		}
 }
 
-void DelVLast (StackList * L, infotype * X)
+void DelVLastStack (StackList * L, infotype * X)
 /* IS : L TIDAK Kosong */
 /* FS : Elemen terakhir list dihapus : nilai info disimpan pada X */
 /* 	dan alamat elemen terakhir di dealokasi */
@@ -80,9 +80,9 @@ void DelVLast (StackList * L, infotype * X)
 	nodeStack PDel;
 	 /* Algoritma */
 	PDel = Bottom(*L);
-	DelLast (&(*L), &PDel);
+	DelLastStack (&(*L), &PDel);
 	(*X) = Num(PDel);
-	DeAlokasi (PDel);
+	DeAlokasiStack (PDel);
 }
 
 void InsertLast (StackList * L, nodeStack P)
@@ -103,7 +103,7 @@ void InsertLast (StackList * L, nodeStack P)
 	}
 }
 
-void DelLast (StackList * L, nodeStack * P)
+void DelLastStack (StackList * L, nodeStack * P)
 /* IS : L TIDAK kosong */
 /* FS : P adalah alamat elemen terakhir list sebelum penghapusan */
 /*	Elemen list berkurang satu (mungkin menjadi kosong) */
@@ -130,5 +130,5 @@ void Push (StackList * L, infotype X)
 
 void Pop (StackList * L, infotype *X)
 {
-	DelVLast(&(*L), &(*X));
+	DelVLastStack(&(*L), &(*X));
 }
