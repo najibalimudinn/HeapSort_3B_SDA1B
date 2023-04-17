@@ -19,10 +19,8 @@ int main()
 	}
 	
 	AscHeapSort (&myTree, &sortedStack);
+	printf("Data Terurut: ");
 	PrintInfo (&sortedStack);
-	
-	free(myTree);
-	free(sortedStack);
 	
 	return 0;
 }

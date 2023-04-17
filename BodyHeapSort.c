@@ -5,7 +5,7 @@
 
 void CreateTree (BinTree *BT)
 {
-	Root(*BT) = NULL;
+	Root(*BT) = Nil;
 }
 
 nodeTree CreateNode (int X)
@@ -29,7 +29,7 @@ void InsertNode (BinTree *BT, int X)
 	QueueList Q;
 	CreateQueueList (&Q);
 	nodeTree temp, isi;
-	if (Root(*BT) != Nil)
+	if (Root(*BT) == Nil)
 	{
 		Root(*BT) = CreateNode(X);
 		return;
@@ -152,6 +152,15 @@ void MinHeapify (nodeTree *node)
 void DeleteNode (BinTree *BT, StackList *S)
 {
 	nodeTree temp, del;
+	if (Root(*BT) == LastChild(*BT))
+	{
+		Push (&(*S), Info(Root(*BT)));
+		del = Root(*BT);
+		Root(*BT) = Nil;
+		LastChild(*BT) = Nil;
+		free(del);
+		return;
+	}
 	Swap (&(Info(Root(*BT))), &(Info(LastChild(*BT))));
 	del = LastChild(*BT);
 	temp = FindParent (Root(*BT), del);
@@ -189,10 +198,10 @@ void PrintInfo (StackList *S)
 
 nodeTree FindParent (nodeTree path, nodeTree search)
 {
-	nodeTree N;
-	if (Left(path) == search) return path;
-	if (Right(path) == search) return path;
-	N = FindParent(Left(path), search);
-	N = FindParent(Right(path), search);
-	if (Left(N) != search || Right(N) != search) return Nil;
+	nodeTree parent;
+	if (path == Nil) return Nil;
+	if (Left(path) == search || Right(path) == search) return path;
+	parent = FindParent (Left(path), search);
+	if (parent != Nil) return parent;
+	return FindParent (Right(path), search);
 }

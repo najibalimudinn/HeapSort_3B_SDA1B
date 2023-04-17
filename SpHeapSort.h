@@ -1,7 +1,7 @@
 #ifndef spheapsort_H
 #define spheapsort_H
-#include "boolean.h"
 #include "spstack.h"
+#include "boolean.h"
 #include <stdio.h>
 #define Nil NULL
 #define Info(P) (P)->info
@@ -45,7 +45,7 @@ void DeleteNode (BinTree *BT, StackList *S);
 
 void Swap (int *info1, int *info2);
 
-void PrintInfo (StackList S);
+void PrintInfo (StackList *S);
 
 nodeTree FindParent (nodeTree BT, nodeTree node);
 
