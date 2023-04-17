@@ -27,7 +27,7 @@ void CreateQueueList (QueueList * L)
 }
 
 /**** Manajemen Memory ****/
-nodeQueue AlokasiQueue (infotypeQ X)
+nodeQueue AlokasiQueue (nodeTree X)
 /* Mengirimkan address hasil alokasi sebuah elemen */
 /* Jika alokasi berhasil, maka address != Nil, 	   */
 /*	dan misalnya menghasilkan P, maka Info(P) = X, Next(P) = Nil */
@@ -59,7 +59,7 @@ void DeAlokasiQueue (nodeQueue P)
 
 /**** PRIMITIF BERDASARKAN NILAI ****/
 /**** Penambahan Elemen ****/
-void InsVFirst (QueueList * L, infotypeQ X)
+void InsVFirst (QueueList * L, nodeTree X)
 /* IS : L mungkin Kosong */
 /* FS : melakukan alokasi sebuah elemen dan */
 /* menambahkan elemen pertama dengan nilai X jika alokasi berhasil */
@@ -73,7 +73,7 @@ void InsVFirst (QueueList * L, infotypeQ X)
 }
 
 
-void DelVLastQueue (QueueList * L, infotypeQ * X)
+void DelVLastQueue (QueueList * L, nodeTree * X)
 /* IS : L TIDAK Kosong */
 /* FS : Elemen terakhir list dihapus : nilai info disimpan pada X */
 /* 	dan alamat elemen terakhir di dealokasi */
@@ -128,12 +128,12 @@ void DelLastQueue (QueueList * L, nodeQueue * P)
 }
 
 
-void Enqueue (QueueList * L, infotypeQ X)
+void Enqueue (QueueList * L, nodeTree X)
 {
 	InsVFirst (&(*L), X);
 }
 
-void Dequeue (QueueList * L, infotypeQ * X)
+void Dequeue (QueueList * L, nodeTree * X)
 {
 	DelVLastQueue (&(*L), &(*X));
 }

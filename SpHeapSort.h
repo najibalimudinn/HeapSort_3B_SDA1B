@@ -1,6 +1,7 @@
 #ifndef spheapsort_H
 #define spheapsort_H
 #include "spstack.h"
+#include "spqueue.h"
 #include "boolean.h"
 #include <stdio.h>
 #define Nil NULL

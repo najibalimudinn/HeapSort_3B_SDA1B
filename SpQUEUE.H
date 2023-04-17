@@ -7,8 +7,8 @@
 
 #ifndef spqueue_H
 #define spqueue_H
+#include "SpHeapSort.H"
 #include "boolean.h"
-#include "spheapsort.h"
 #include <stdio.h>
 #define Nil NULL
 #define Address(P) (P)->address
@@ -17,6 +17,8 @@
 #define First(L) (L).First
 #define Last(L) (L).Last
 
+// struct nodeTree;
+typedef struct tElmtTree *nodeTree;
 typedef nodeTree infotypeQ;
 typedef struct tQElmtList *nodeQueue;
 typedef struct tQElmtList {

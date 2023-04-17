@@ -1,6 +1,9 @@
 #include "spheapsort.h"
 #include "spqueue.h"
 #include "spstack.h"
+#include "BodyQUEUE.C"
+#include "BodySTACK.C"
+#include "BodyHeapSort.C"
 #include <stdio.h>
 
 int main()
