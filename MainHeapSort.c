@@ -18,7 +18,7 @@ int main()
 		InsertNode (&myTree, tes[i]);
 	}
 	
-	AscHeapSort (&myTree, &sortedStack);
+	DescHeapSort (&myTree, &sortedStack);
 	printf("Data Terurut: ");
 	PrintInfo (&sortedStack);
 	

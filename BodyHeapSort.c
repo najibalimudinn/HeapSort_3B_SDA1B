@@ -93,7 +93,7 @@ void BuildMaxHeap (nodeTree *node)
 
 void BuildMinHeap (nodeTree *node)
 {
-	if (Left(Left(*node)) == Nil) return;
+	if (*node == Nil) return;
 	BuildMinHeap(&(Left(*node)));
 	BuildMinHeap(&(Right(*node)));
 	MinHeapify(&(*node));
