@@ -27,7 +27,7 @@ void CreateQueueList (QueueList * L)
 }
 
 /**** Manajemen Memory ****/
-nodeQueue Alokasi (infotypeQ X)
+nodeQueue AlokasiQueue (infotypeQ X)
 /* Mengirimkan address hasil alokasi sebuah elemen */
 /* Jika alokasi berhasil, maka address != Nil, 	   */
 /*	dan misalnya menghasilkan P, maka Info(P) = X, Next(P) = Nil */
@@ -46,7 +46,7 @@ nodeQueue Alokasi (infotypeQ X)
 	 return (P);
 }
 
-void DeAlokasi (nodeQueue P)
+void DeAlokasiQueue (nodeQueue P)
 /* IS : P terdefinisi */
 /* FS : P dikembalikan ke sistem */
 /* Melakukan dealokasi / pengembalian address P ke system */
@@ -67,13 +67,13 @@ void InsVFirst (QueueList * L, infotypeQ X)
 	 /* Kamus Lokal */
 	nodeQueue P;
 	 /* Aloritma */
-	P = Alokasi (X);
+	P = AlokasiQueue (X);
 	if (P != Nil)
 	{	InsertFirst (&(*L), P);		}
 }
 
 
-void DelVLast (QueueList * L, infotypeQ * X)
+void DelVLastQueue (QueueList * L, infotypeQ * X)
 /* IS : L TIDAK Kosong */
 /* FS : Elemen terakhir list dihapus : nilai info disimpan pada X */
 /* 	dan alamat elemen terakhir di dealokasi */
@@ -82,9 +82,9 @@ void DelVLast (QueueList * L, infotypeQ * X)
 	nodeQueue PDel;
 	 /* Algoritma */
 	PDel = Last(*L);
-	DelLast (&(*L), &PDel);
+	DelLastQueue (&(*L), &PDel);
 	(*X) = Address(PDel);
-	DeAlokasi (PDel);
+	DeAlokasiQueue (PDel);
 }
 
 /**** PRIMITIF BERDASARKAN ALAMAT ****/
@@ -107,7 +107,7 @@ void InsertFirst (QueueList * L, nodeQueue P)
 }
 
 
-void DelLast (QueueList * L, nodeQueue * P)
+void DelLastQueue (QueueList * L, nodeQueue * P)
 /* IS : L TIDAK kosong */
 /* FS : P adalah alamat elemen terakhir list sebelum penghapusan */
 /*	Elemen list berkurang satu (mungkin menjadi kosong) */
@@ -135,6 +135,6 @@ void Enqueue (QueueList * L, infotypeQ X)
 
 void Dequeue (QueueList * L, infotypeQ * X)
 {
-	DelVLast (&(*L), &(*X));
+	DelVLastQueue (&(*L), &(*X));
 }
 

@@ -45,13 +45,13 @@ void CreateQueueList (QueueList * L);
 /* FS : Terbentuk List Kosong */
 
 /**** Manajemen Memory ****/
-nodeQueue Alokasi (infotypeQ X);
+nodeQueue AlokasiQueue (infotypeQ X);
 /* Mengirimkan address hasil alokasi sebuah elemen */
 /* Jika alokasi berhasil, maka address != Nil, 	   */
 /*	dan misalnya menghasilkan P, maka Info(P) = X, Next(P) = Nil */
 /* Jika alokasi gagal, mengirimkan Nil */
 
-void DeAlokasi (nodeQueue P);
+void DeAlokasiQueue (nodeQueue P);
 /* IS : P terdefinisi */
 /* FS : P dikembalikan ke sistem */
 /* Melakukan dealokasi / pengembalian address P ke system */
@@ -65,7 +65,7 @@ void InsVFirst (QueueList * L, infotypeQ X);
 /* menambahkan elemen pertama dengan nilai X jika alokasi berhasil */
 
 
-void DelVLast (QueueList * L, infotypeQ * X);
+void DelVLastQueue (QueueList * L, infotypeQ * X);
 /* IS : L TIDAK Kosong */
 /* FS : Elemen terakhir list dihapus : nilai info disimpan pada X */
 /* 	dan alamat elemen terakhir di dealokasi */
@@ -77,7 +77,7 @@ void InsertFirst (QueueList * L, nodeQueue P);
 /* FS : menambahkan elemen ber-address P sebagai elemen pertama */
 
 
-void DelLast (QueueList * L, nodeQueue * P);
+void DelLastQueue (QueueList * L, nodeQueue * P);
 /* IS : L TIDAK kosong */
 /* FS : P adalah alamat elemen terakhir list sebelum penghapusan */
 /*	Elemen list berkurang satu (mungkin menjadi kosong) */
