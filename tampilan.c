@@ -73,7 +73,7 @@ void Mulai(int batas, int tes[]) {
 	for(j=0;j<batas;j++){
 	printf("Skor akhir: ");
 		scanf("%d", &tes[j]);
-		printf("Skor akhir %d telah diinsert\n", tes[j]);
+		printf("Skor akhir %d telah diinsert\n\n", tes[j]);
 	}
 	
 	for (i=0; i<batas; i++) {
@@ -81,6 +81,6 @@ void Mulai(int batas, int tes[]) {
 	}
 
     DescHeapSort (&myTree, &sortedStack);
-	printf("Data Terurut: ");
+	printf("\n\nData Terurut: ");
 	PrintInfo (&sortedStack);
 }
