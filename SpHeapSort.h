@@ -2,7 +2,7 @@
 #define spheapsort_H
 #include "spstack.h"
 #include "spqueue.h"
-#include "boolean.h"
+#include <stdbool.h>
 #include <stdio.h>
 #define Nil NULL
 #define Info(P) (P)->info

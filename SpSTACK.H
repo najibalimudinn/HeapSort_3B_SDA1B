@@ -7,7 +7,7 @@
 
 #ifndef spstack_H
 #define spstack_H
-#include "boolean.h"
+#include <stdbool.h>
 #include "spheapsort.h"
 #include <stdio.h>
 #define Nil NULL
@@ -36,7 +36,7 @@ typedef struct {
 
 /*********** PROTOTYPE ****************/
 /**** Predikat untuk test keadaan LIST  ****/
-boolean StackListEmpty (StackList L);
+bool StackListEmpty (StackList L);
 /* Mengirim true jika List Kosong */
 
 /**** Konstruktor/Kreator List Kosong ****/

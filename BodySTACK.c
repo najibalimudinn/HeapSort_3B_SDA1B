@@ -11,7 +11,7 @@
 
 /********** BODY SUB PROGRAM ***********/
 /**** Predikat untuk test keadaan LIST  ****/
-boolean StackListEmpty (StackList L)
+bool StackListEmpty (StackList L)
 /* Mengirim true jika List Kosong */
 {
 	 return (Top(L) == Nil);

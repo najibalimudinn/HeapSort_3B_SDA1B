@@ -8,7 +8,7 @@
 #ifndef spqueue_H
 #define spqueue_H
 #include "SpHeapSort.H"
-#include "boolean.h"
+#include <stdbool.h>
 #include <stdio.h>
 #define Nil NULL
 #define Address(P) (P)->address
@@ -38,7 +38,7 @@ typedef struct {
 
 /*********** PROTOTYPE ****************/
 /**** Predikat untuk test keadaan LIST  ****/
-boolean QueueListEmpty (QueueList L);
+bool QueueListEmpty (QueueList L);
 /* Mengirim true jika List Kosong */
 
 /**** Konstruktor/Kreator List Kosong ****/

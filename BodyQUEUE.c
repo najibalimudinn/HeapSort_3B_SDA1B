@@ -11,7 +11,7 @@
 
 /********** BODY SUB PROGRAM ***********/
 /**** Predikat untuk test keadaan LIST  ****/
-boolean QueueListEmpty (QueueList L)
+bool QueueListEmpty (QueueList L)
 /* Mengirim true jika List Kosong */
 {
 	 return (First(L) == Nil);
