@@ -2,8 +2,8 @@
 #include "spqueue.h"
 #include "spstack.h"
 #include "tampilan.h"
-#include "BodyQUEUE.C"
-#include "BodySTACK.C"
+// #include "BodyQUEUE.C"
+// #include "BodySTACK.C"
 #include "BodyHeapSort.C"
 #include "tampilan.C"
 

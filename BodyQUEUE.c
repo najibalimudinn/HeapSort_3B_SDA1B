@@ -5,8 +5,8 @@
 
 #include <limits.h>
 #include <malloc.h>
-#include "spheapsort.h"
-#include "spstack.h"
+// #include "spheapsort.h"
+// #include "spstack.h"
 #include "spqueue.h"
 
 /********** BODY SUB PROGRAM ***********/

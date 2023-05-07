@@ -57,12 +57,13 @@ char GetAwal(char HowBegin[15])
     return (result);
 }
 
-void Mulai(int batas, int tes){
+void Mulai(int batas, int tes[]) {
     BinTree myTree;
 	StackList sortedStack;
-    
-    CreateTree (&myTree); // membuat tree kosong
-	CreateStackList (&sortedStack); // membuat list kosong
+    int i, j;
+
+    CreateTree(&myTree); // membuat tree kosong
+	CreateStackList(&sortedStack); // membuat list kosong
 	
 	printf("Inputkan jumlah pemain: ");
 	scanf("%d", &batas);
@@ -73,8 +74,11 @@ void Mulai(int batas, int tes){
 		printf("Skor akhir %d telah diinsert", tes[j]);
 	}
 	
-	for (i=0;i<batas;i++)
-	{
-		InsertNode (&myTree, tes[i]);
+	for (i=0; i<batas; i++) {
+		InsertNode(&myTree, tes[i]);
 	}
+
+    DescHeapSort (&myTree, &sortedStack);
+	printf("Data Terurut: ");
+	PrintInfo (&sortedStack);
 }
