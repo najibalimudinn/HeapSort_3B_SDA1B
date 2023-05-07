@@ -21,7 +21,7 @@ int main()
 
 		switch (opsi)
 		{
-		case 'A': // Penjelasan
+		case 'A': // penjelasan
 			typewriter(message, speed);
 			goto start;
 			break;

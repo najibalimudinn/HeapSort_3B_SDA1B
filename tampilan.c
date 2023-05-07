@@ -2,6 +2,7 @@
 
 void typewriter(const char *message, int speed)
 {
+    system("cls");
     int len = strlen(message);
 
     for (int i = 0; i < len; i++)
@@ -28,7 +29,7 @@ void DisplayAwal()
     printf("                              | $$                                              \n");
     printf("                              |__//    \n");
 
-    printf("                    Ketik 'mulai' atau 'Penjelasan': ");
+    printf("                    Ketik 'mulai' atau 'penjelasan': ");
 }
 
 void ReadAwal(char HowBegin[15])
@@ -58,6 +59,7 @@ char GetAwal(char HowBegin[15])
 }
 
 void Mulai(int batas, int tes[]) {
+    system("cls");
     BinTree myTree;
 	StackList sortedStack;
     int i, j;
@@ -68,10 +70,10 @@ void Mulai(int batas, int tes[]) {
 	printf("Inputkan jumlah pemain: ");
 	scanf("%d", &batas);
 	
-	printf("Skor akhir: ");
 	for(j=0;j<batas;j++){
+	printf("Skor akhir: ");
 		scanf("%d", &tes[j]);
-		printf("Skor akhir %d telah diinsert", tes[j]);
+		printf("Skor akhir %d telah diinsert\n", tes[j]);
 	}
 	
 	for (i=0; i<batas; i++) {
