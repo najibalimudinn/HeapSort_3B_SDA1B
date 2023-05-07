@@ -12,7 +12,7 @@
 int main()
 {
 	char opsi, hb[15];
-	char message[] = "Ini adalah pesan yang akan ditampilkan seperti mengetik.";
+	char message[] = "Inputkan jumlah pemain dan nilai akhir pemain, program akan mengurutkan nilai akhir pemain.";
     int speed = 100; // 0.1 detik
 	int batas,tes[MAXSIZE];
 	start:

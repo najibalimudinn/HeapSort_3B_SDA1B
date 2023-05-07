@@ -39,7 +39,7 @@ void ReadAwal(char HowBegin[15])
 
 char GetAwal(char HowBegin[15])
 {
-    char how[] = "Penjelasan";
+    char how[] = "penjelasan";
     char begin[] = "mulai";
     char result;
     if (strcmp(HowBegin, how) == 0)
