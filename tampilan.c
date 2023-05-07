@@ -79,8 +79,40 @@ void Mulai(int batas, int tes[]) {
 	for (i=0; i<batas; i++) {
 		InsertNode(&myTree, tes[i]);
 	}
+	
+	system("cls");
+	
 
-    DescHeapSort (&myTree, &sortedStack);
-	printf("\n\nData Terurut: ");
-	PrintInfo (&sortedStack);
+    PilihSort(&myTree, &sortedStack);
+}
+
+void PilihSort(BinTree *BT, Stacklist *S)
+{
+	char opsi;
+	system("cls");
+	printf("\n\nData: ");
+	PrintTree(&(*BT));
+	
+	printf("\n\nUrut berdasarkan: \n");
+	printf("1. Ascending\n");
+	printf("2. Descending\n\n");
+	printf("Pilihan: ");
+	scanf("%c", &opsi);
+	
+	if (opsi == '1')
+	{
+		system("cls");
+		printf("\n\nData: ");
+		PrintTree(&(*BT));
+		AscHeapSort (&(*BT), &(*S));
+		printf("\n\nData Terurut: ");
+	}
+	else if (opsi == '2')
+	{
+		system("cls");
+		printf("\n\nData: ");
+		PrintTree(&(*BT));
+		DescHeapSort (&(*BT), &(*S));
+		printf("\n\nData Terurut: ");
+	}
 }
