@@ -13,8 +13,8 @@ int main()
 	int tes[10] = {5, 2, 7, 4, 6, 1, 3, 9, 11, 10};
 	int i;
 	
-	CreateTree (&myTree);
-	CreateStackList (&sortedStack);
+	CreateTree (&myTree); // membuat tree kosong
+	CreateStackList (&sortedStack); // membuat list kosong
 	
 	for (i=0;i<10;i++)
 	{
@@ -24,6 +24,10 @@ int main()
 	DescHeapSort (&myTree, &sortedStack);
 	printf("Data Terurut: ");
 	PrintInfo (&sortedStack);
+
+	// AscHeapSort (&myTree, &sortedStack);
+	// printf("\nData Terurut: ");
+	// PrintInfo (&sortedStack);
 	
 	return 0;
 }
