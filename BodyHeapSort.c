@@ -205,3 +205,41 @@ nodeTree FindParent (nodeTree path, nodeTree search)
 	if (parent != Nil) return parent;
 	return FindParent (Right(path), search);
 }
+
+void PrintTree (BinTree *BT)
+{
+	QueueList Q;
+	CreateQueueList (&Q);
+	nodeTree temp, isi;
+	if (Root(*BT) == Nil)
+	{
+		return;
+	}
+	printf("%d ", Info(Root(*BT)));
+	Enqueue (&Q, Root(*BT));
+	while (First(Q) != Nil)
+	{
+		temp = Address(First(Q));
+		Dequeue (&Q, &isi);
+		
+		if (Left(temp) != Nil)
+		{
+			printf("%d ", Info(Left(temp)));
+			Enqueue(&Q, Left(temp));
+		}
+		else
+		{
+			return;
+		}
+		
+		if (Right(temp) != Nil)
+		{
+			printf("%d ", Info(Right(temp)));
+			Enqueue(&Q, Right(temp));
+		}
+		else
+		{
+			return;
+		}
+	}
+}
