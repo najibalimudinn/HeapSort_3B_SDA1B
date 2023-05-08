@@ -8,7 +8,6 @@
 #ifndef spstack_H
 #define spstack_H
 #include <stdbool.h>
-#include "spheapsort.h"
 #include <stdio.h>
 #define Nil NULL
 #define Num(P) (P)->num

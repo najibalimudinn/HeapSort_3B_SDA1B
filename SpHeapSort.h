@@ -50,4 +50,6 @@ void PrintInfo (StackList *S);
 
 nodeTree FindParent (nodeTree BT, nodeTree node);
 
+void PrintTree (BinTree BT);
+
 #endif

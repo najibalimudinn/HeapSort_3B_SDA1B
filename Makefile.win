@@ -1,37 +1,40 @@
 # Project: HeapSort
-# Makefile created by Embarcadero Dev-C++ 6.3
+# Makefile created by Dev-C++ 5.11
 
 CPP      = g++.exe -D__DEBUG__
 CC       = gcc.exe -D__DEBUG__
 WINDRES  = windres.exe
-OBJ      = BodyHeapSort.o MainHeapSort.o C:/HeapSort_3B_SDA1B-main/HeapSort_3B_SDA1B-main/BodyQUEUE.o C:/HeapSort_3B_SDA1B-main/HeapSort_3B_SDA1B-main/BodySTACK.o
-LINKOBJ  = BodyHeapSort.o MainHeapSort.o C:/HeapSort_3B_SDA1B-main/HeapSort_3B_SDA1B-main/BodyQUEUE.o C:/HeapSort_3B_SDA1B-main/HeapSort_3B_SDA1B-main/BodySTACK.o
-LIBS     = -L"D:/Dev-Cpp/TDM-GCC-64/lib" -L"D:/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc -g3
-INCS     = -I"D:/Dev-Cpp/TDM-GCC-64/include" -I"D:/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"D:/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
-CXXINCS  = -I"D:/Dev-Cpp/TDM-GCC-64/include" -I"D:/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"D:/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"D:/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
+OBJ      = tampilan.o MainHeapSort.o BodySTACK.o BodyHeapSort.o BodyQUEUE.o
+LINKOBJ  = tampilan.o MainHeapSort.o BodySTACK.o BodyHeapSort.o BodyQUEUE.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
 BIN      = HeapSort.exe
 CXXFLAGS = $(CXXINCS) -g3
 CFLAGS   = $(INCS) -g3
-DEL      = D:\Dev-Cpp\devcpp.exe INTERNAL_DEL
+RM       = rm.exe -f
 
 .PHONY: all all-before all-after clean clean-custom
 
 all: all-before $(BIN) all-after
 
 clean: clean-custom
-	${DEL} $(OBJ) $(BIN)
+	${RM} $(OBJ) $(BIN)
 
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-BodyHeapSort.o: BodyHeapSort.c
-	$(CPP) -c BodyHeapSort.c -o BodyHeapSort.o $(CXXFLAGS)
+tampilan.o: tampilan.cpp
+	$(CPP) -c tampilan.cpp -o tampilan.o $(CXXFLAGS)
 
-MainHeapSort.o: MainHeapSort.c
-	$(CPP) -c MainHeapSort.c -o MainHeapSort.o $(CXXFLAGS)
+MainHeapSort.o: MainHeapSort.cpp
+	$(CPP) -c MainHeapSort.cpp -o MainHeapSort.o $(CXXFLAGS)
 
-C:/HeapSort_3B_SDA1B-main/HeapSort_3B_SDA1B-main/BodyQUEUE.o: C:/HeapSort_3B_SDA1B-main/HeapSort_3B_SDA1B-main/BodyQUEUE.c
-	$(CPP) -c C:/HeapSort_3B_SDA1B-main/HeapSort_3B_SDA1B-main/BodyQUEUE.c -o C:/HeapSort_3B_SDA1B-main/HeapSort_3B_SDA1B-main/BodyQUEUE.o $(CXXFLAGS)
+BodySTACK.o: BodySTACK.cpp
+	$(CPP) -c BodySTACK.cpp -o BodySTACK.o $(CXXFLAGS)
 
-C:/HeapSort_3B_SDA1B-main/HeapSort_3B_SDA1B-main/BodySTACK.o: C:/HeapSort_3B_SDA1B-main/HeapSort_3B_SDA1B-main/BodySTACK.c
-	$(CPP) -c C:/HeapSort_3B_SDA1B-main/HeapSort_3B_SDA1B-main/BodySTACK.c -o C:/HeapSort_3B_SDA1B-main/HeapSort_3B_SDA1B-main/BodySTACK.o $(CXXFLAGS)
+BodyHeapSort.o: BodyHeapSort.cpp
+	$(CPP) -c BodyHeapSort.cpp -o BodyHeapSort.o $(CXXFLAGS)
+
+BodyQUEUE.o: BodyQUEUE.cpp
+	$(CPP) -c BodyQUEUE.cpp -o BodyQUEUE.o $(CXXFLAGS)

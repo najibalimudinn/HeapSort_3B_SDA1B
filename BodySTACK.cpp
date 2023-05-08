@@ -5,9 +5,7 @@
 
 #include <limits.h>
 #include <malloc.h>
-// #include "spheapsort.h"
 #include "spstack.h"
-// #include "spqueue.h"
 
 /********** BODY SUB PROGRAM ***********/
 /**** Predikat untuk test keadaan LIST  ****/
