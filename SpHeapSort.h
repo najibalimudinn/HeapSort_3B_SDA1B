@@ -52,4 +52,8 @@ nodeTree FindParent (nodeTree BT, nodeTree node);
 
 void PrintTree (BinTree BT);
 
+void riwayatSort( StackList *S);
+
+
+
 #endif

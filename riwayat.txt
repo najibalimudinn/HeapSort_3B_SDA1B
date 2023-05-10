@@ -1,0 +1,38 @@
+
+Waktu sort: 10-05-2023 16:26:37
+Hasil sort: 21
+Hasil sort: 40
+Hasil sort: 98
+
+Waktu sort: 10-05-2023 16:44:39
+Hasil sort: -98
+Hasil sort: 13
+Hasil sort: 21
+
+Waktu sort: 10-05-2023 16:45:26
+Hasil sort: 45
+Hasil sort: 40
+Hasil sort: 38
+Hasil sort: 32
+Hasil sort: -100
+
+Waktu sort: 10-05-2023 16:48:38
+Hasil sort: 21
+Hasil sort: 59
+Hasil sort: 65
+
+Waktu sort: 10-05-2023 16:49:29
+Hasil sort: 219
+Hasil sort: 47
+Hasil sort: 31
+
+Waktu sort: 10-05-2023 16:49:52
+Hasil sort: 59
+Hasil sort: 47
+Hasil sort: 31
+
+Waktu sort: 10-05-2023 16:58:58
+Hasil sort: 20
+Hasil sort: 21
+Hasil sort: 36
+

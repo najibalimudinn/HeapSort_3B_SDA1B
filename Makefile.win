@@ -1,40 +1,40 @@
 # Project: HeapSort
-# Makefile created by Dev-C++ 5.11
+# Makefile created by Embarcadero Dev-C++ 6.3
 
 CPP      = g++.exe -D__DEBUG__
 CC       = gcc.exe -D__DEBUG__
 WINDRES  = windres.exe
-OBJ      = ../tes/BodyHeapSort.o ../tes/BodyQUEUE.o ../tes/BodySTACK.o ../tes/MainHeapSort.o ../tes/tampilan.o
-LINKOBJ  = ../tes/BodyHeapSort.o ../tes/BodyQUEUE.o ../tes/BodySTACK.o ../tes/MainHeapSort.o ../tes/tampilan.o
-LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
-INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
-CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+OBJ      = MainHeapSort.o BodyHeapSort.o BodyQUEUE.o BodySTACK.o tampilan.o
+LINKOBJ  = MainHeapSort.o BodyHeapSort.o BodyQUEUE.o BodySTACK.o tampilan.o
+LIBS     = -L"D:/Dev-Cpp/TDM-GCC-64/lib" -L"D:/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"D:/Dev-Cpp/TDM-GCC-64/include" -I"D:/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"D:/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+CXXINCS  = -I"D:/Dev-Cpp/TDM-GCC-64/include" -I"D:/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"D:/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"D:/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
 BIN      = HeapSort.exe
 CXXFLAGS = $(CXXINCS) -g3
 CFLAGS   = $(INCS) -g3
-RM       = rm.exe -f
+DEL      = D:\Dev-Cpp\devcpp.exe INTERNAL_DEL
 
 .PHONY: all all-before all-after clean clean-custom
 
 all: all-before $(BIN) all-after
 
 clean: clean-custom
-	${RM} $(OBJ) $(BIN)
+	${DEL} $(OBJ) $(BIN)
 
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-../tes/BodyHeapSort.o: ../tes/BodyHeapSort.cpp
-	$(CPP) -c ../tes/BodyHeapSort.cpp -o ../tes/BodyHeapSort.o $(CXXFLAGS)
+MainHeapSort.o: MainHeapSort.cpp
+	$(CPP) -c MainHeapSort.cpp -o MainHeapSort.o $(CXXFLAGS)
 
-../tes/BodyQUEUE.o: ../tes/BodyQUEUE.cpp
-	$(CPP) -c ../tes/BodyQUEUE.cpp -o ../tes/BodyQUEUE.o $(CXXFLAGS)
+BodyHeapSort.o: BodyHeapSort.cpp
+	$(CPP) -c BodyHeapSort.cpp -o BodyHeapSort.o $(CXXFLAGS)
 
-../tes/BodySTACK.o: ../tes/BodySTACK.cpp
-	$(CPP) -c ../tes/BodySTACK.cpp -o ../tes/BodySTACK.o $(CXXFLAGS)
+BodyQUEUE.o: BodyQUEUE.cpp
+	$(CPP) -c BodyQUEUE.cpp -o BodyQUEUE.o $(CXXFLAGS)
 
-../tes/MainHeapSort.o: ../tes/MainHeapSort.cpp
-	$(CPP) -c ../tes/MainHeapSort.cpp -o ../tes/MainHeapSort.o $(CXXFLAGS)
+BodySTACK.o: BodySTACK.cpp
+	$(CPP) -c BodySTACK.cpp -o BodySTACK.o $(CXXFLAGS)
 
-../tes/tampilan.o: ../tes/tampilan.cpp
-	$(CPP) -c ../tes/tampilan.cpp -o ../tes/tampilan.o $(CXXFLAGS)
+tampilan.o: tampilan.cpp
+	$(CPP) -c tampilan.cpp -o tampilan.o $(CXXFLAGS)

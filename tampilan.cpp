@@ -13,7 +13,7 @@ void typewriter(const char *message, int speed)
     }
 }
 
-void DisplayAwal()
+  void DisplayAwal()
 {
     system("cls");
 
@@ -77,9 +77,9 @@ void Mulai(int batas, int tes[]) {
 	printf("Nilai bilangan ke-%d: ", j+1);
 		scanf("%d", &tes[j]);
 		InsertNode(&myTree, tes[j]);
-		printf("Bilangan %d telah diinsert\n\n", tes[j]+1);
+		printf("Bilangan %d telah diinsert\n\n", tes[j]);
 	}
-	
+
 	system("pause");
 	
 
@@ -110,8 +110,11 @@ void PilihSort(BinTree *BT, StackList *S)
 		PrintTree(*BT);
 		printf("\n\n==================================");
 		AscHeapSort (&(*BT), &(*S));
-		printf("\n\nData Terurut: ");
+		riwayatSort(&(*S));
 		PrintInfo(&(*S));
+		
+	
+		
 	}
 	else if (opsi == '2')
 	{
@@ -121,7 +124,7 @@ void PilihSort(BinTree *BT, StackList *S)
 		PrintTree(*BT);
 		printf("\n\n==================================");
 		DescHeapSort (&(*BT), &(*S));
-		printf("\n\nData Terurut: ");
+		riwayatSort(&(*S));
 		PrintInfo(&(*S));
 	}
 	else

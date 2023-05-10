@@ -28,7 +28,7 @@ Folders=
 IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
-CompilerSettings=0000000000000000001000000
+CompilerSettings=0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0
 UnitCount=10
 
 [VersionInfo]
@@ -50,18 +50,8 @@ ProductVersion=
 AutoIncBuildNr=0
 SyncProduct=1
 
-[Unit1]
-FileName=..\tes\BodyHeapSort.cpp
-CompileCpp=1
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
 [Unit2]
-FileName=..\tes\BodyQUEUE.cpp
+FileName=BodyHeapSort.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -71,7 +61,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit3]
-FileName=..\tes\BodySTACK.cpp
+FileName=BodyQUEUE.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -81,7 +71,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit4]
-FileName=..\tes\BOOLEAN.H
+FileName=BodySTACK.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -91,7 +81,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit5]
-FileName=..\tes\MainHeapSort.cpp
+FileName=BOOLEAN.H
 CompileCpp=1
 Folder=
 Compile=1
@@ -101,7 +91,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit6]
-FileName=..\tes\SpHeapSort.h
+FileName=SpHeapSort.h
 CompileCpp=1
 Folder=
 Compile=1
@@ -111,7 +101,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit7]
-FileName=..\tes\SpQUEUE.H
+FileName=SpQUEUE.H
 CompileCpp=1
 Folder=
 Compile=1
@@ -121,7 +111,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit8]
-FileName=..\tes\SpSTACK.h
+FileName=SpSTACK.H
 CompileCpp=1
 Folder=
 Compile=1
@@ -131,7 +121,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit9]
-FileName=..\tes\tampilan.cpp
+FileName=tampilan.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -141,7 +131,17 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit10]
-FileName=..\tes\tampilan.h
+FileName=tampilan.h
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit1]
+FileName=MainHeapSort.cpp
 CompileCpp=1
 Folder=
 Compile=1

@@ -1,4 +1,6 @@
-#include <malloc.h>                 
+#include <malloc.h> 
+#include <stdio.h>  
+#include <time.h>              
 #include "spheapsort.h"
 #include "spstack.h"
 #include "spqueue.h"
@@ -186,15 +188,29 @@ void Swap (int *info1, int *info2)
 	*info2 = temp;
 }
 
-void PrintInfo (StackList *S)
+
+void PrintInfo(StackList *S)
 {
-	int isi;
-	while (Top(*S) != Nil)
-	{
-		Pop (&(*S), &isi);
-		printf("%d ", isi);
-	}
+    StackList tempStack;
+    CreateStackList(&tempStack); // Buat stack sementara
+    
+    int isi;
+    printf("\n\nData Terurut: ");
+    while (!StackListEmpty(*S))
+    {
+        Pop(&(*S), &isi);
+        Push(&tempStack, isi); // Simpan nilai dalam stack sementara
+        printf("%d ", isi);
+    }
+    
+    // Kembalikan nilai ke stack asli
+    while (!StackListEmpty(tempStack))
+    {
+        Pop(&tempStack, &isi);
+        Push(S, isi);
+    }
 }
+
 
 nodeTree FindParent (nodeTree path, nodeTree search)
 {
@@ -244,3 +260,51 @@ void PrintTree (BinTree BT)
 		}
 	}
 }
+
+void riwayatSort(StackList *S)
+{
+    FILE *file;
+    file = fopen("riwayat.txt", "a");
+    int isi;
+    
+    if (file == NULL) {
+        printf("Gagal membuka file.");
+        return;  // Keluar dari program jika gagal membuka file
+    }
+    time_t t = time(NULL);
+    struct tm *currentTime = localtime(&t);
+
+    //  komponen waktu
+    int year = currentTime->tm_year + 1900; // Tahun (di-offset dengan 1900)
+    int month = currentTime->tm_mon + 1;    // Bulan (di-offset dengan 1)
+    int day = currentTime->tm_mday;         // Hari
+    int hour = currentTime->tm_hour;        // Jam
+    int minute = currentTime->tm_min;       // Menit
+    int second = currentTime->tm_sec;       // Detik
+    
+    StackList tempStack;
+    CreateStackList(&tempStack); // Buat stack sementara
+    
+    fprintf(file, "Waktu sort: %02d-%02d-%d %02d:%02d:%02d\n", day, month, year, hour, minute, second);
+   
+	
+    while ( !StackListEmpty(*S))
+    {
+        Pop(S, &isi);
+        Push(&tempStack, isi); // Simpan nilai dalam stack sementara
+        fprintf(file, "Hasil sort: %d\n", isi);
+       
+    }
+    fprintf(file, "\n");
+    
+    // Kembalikan nilai ke stack asli
+    while (!StackListEmpty(tempStack))
+    {
+        Pop(&tempStack, &isi);
+        Push(S, isi);
+    }
+    
+    fclose(file);
+}
+
+
