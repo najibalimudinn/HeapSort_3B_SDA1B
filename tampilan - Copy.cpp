@@ -111,7 +111,10 @@ void PilihSort(BinTree *BT, StackList *S)
 		printf("\n\n==================================");
 		AscHeapSort (&(*BT), &(*S));
 		riwayatSort(&(*S));
-		PrintInfo(&(*BT), &(*S));	
+		PrintInfo(&(*S));
+		
+	
+		
 	}
 	else if (opsi == '2')
 	{
@@ -122,52 +125,7 @@ void PilihSort(BinTree *BT, StackList *S)
 		printf("\n\n==================================");
 		DescHeapSort (&(*BT), &(*S));
 		riwayatSort(&(*S));
-		PrintInfo(&(*BT), &(*S));
-	}
-	else
-	{
-		printf("\n\nMasukkan tidak valid!");
-		getch();
-		goto start;
-	}
-	LastMenu(&(*BT), &(*S));
-}
-
-void LastMenu (BinTree *BT, StackList *S) {
-	char opsi;
-	start:
-	printf("\n\nMenu: \n");
-	printf("1. Urutkan lagi\n");
-	printf("2. Tambahkan bilangan\n");
-	printf("3. Keluar\n\n");
-	printf("Pilihan: ");
-	scanf(" %c", &opsi);
-	
-	if (opsi == '1')
-	{
-		PilihSort(&(*BT), &(*S));	
-	}
-	else if (opsi == '2')
-	{
-		int inp, batas, j;
-		system("cls");
-		DisplayAwal();
-		printf("\n\nInputkan jumlah bilangan: ");
-		scanf("%d", &batas);
-	
-		for(j=0;j<batas;j++){
-			printf("Nilai bilangan ke-%d: ", j+1);
-			scanf("%d", &inp);
-			InsertNode(&(*BT), inp);
-			printf("Bilangan %d telah diinsert\n\n", inp);
-		}
-
-		system("pause");
-		PilihSort(&(*BT), &(*S));
-	}
-	else if (opsi == '3')
-	{
-		exit(0);
+		PrintInfo(&(*S));
 	}
 	else
 	{

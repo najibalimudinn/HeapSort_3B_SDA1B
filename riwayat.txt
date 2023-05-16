@@ -1,38 +1,12 @@
-
-Waktu sort: 10-05-2023 16:26:37
-Hasil sort: 21
-Hasil sort: 40
-Hasil sort: 98
-
-Waktu sort: 10-05-2023 16:44:39
-Hasil sort: -98
-Hasil sort: 13
-Hasil sort: 21
-
-Waktu sort: 10-05-2023 16:45:26
-Hasil sort: 45
-Hasil sort: 40
-Hasil sort: 38
-Hasil sort: 32
-Hasil sort: -100
-
-Waktu sort: 10-05-2023 16:48:38
-Hasil sort: 21
-Hasil sort: 59
-Hasil sort: 65
-
-Waktu sort: 10-05-2023 16:49:29
-Hasil sort: 219
-Hasil sort: 47
-Hasil sort: 31
-
-Waktu sort: 10-05-2023 16:49:52
-Hasil sort: 59
-Hasil sort: 47
-Hasil sort: 31
-
-Waktu sort: 10-05-2023 16:58:58
-Hasil sort: 20
-Hasil sort: 21
-Hasil sort: 36
-
+Waktu sort: 16-05-2023 02:27:16
+Hasil sort: 1 12 33 43
+Waktu sort: 16-05-2023 08:16:58
+Hasil sort: 32 12 11 10
+Waktu sort: 16-05-2023 08:18:01
+Hasil sort: 43 23 11 -1
+Waktu sort: 16-05-2023 08:18:57
+Hasil sort: -1 11 23 43 43 23 11 -1
+Waktu sort: 16-05-2023 08:19:21
+Hasil sort: -1 -1 11 11 21 23 23 32 43 43 43 55 -1 11 23 43 43 23 11 -1
+Waktu sort: 16-05-2023 08:20:04
+Hasil sort: 2 4

@@ -20,7 +20,6 @@ void ReadAwal(char HowBegin[15]); // variabel penampung dari tampilan awal
 char GetAwal(char HowBegin[15]); 
 void Mulai(int batas, int tes[]);
 void PilihSort(BinTree *BT, StackList *S);
-void LastMenu (BinTree *BT, StackList *S);
 
 
 #endif

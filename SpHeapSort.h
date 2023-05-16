@@ -46,7 +46,7 @@ void DeleteNode (BinTree *BT, StackList *S);
 
 void Swap (int *info1, int *info2);
 
-void PrintInfo (StackList *S);
+void PrintInfo(BinTree *BT, StackList *S);
 
 nodeTree FindParent (nodeTree BT, nodeTree node);
 

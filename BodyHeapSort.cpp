@@ -189,7 +189,7 @@ void Swap (int *info1, int *info2)
 }
 
 
-void PrintInfo(StackList *S)
+void PrintInfo(BinTree *BT, StackList *S)
 {
     StackList tempStack;
     CreateStackList(&tempStack); // Buat stack sementara
@@ -200,6 +200,7 @@ void PrintInfo(StackList *S)
     {
         Pop(&(*S), &isi);
         Push(&tempStack, isi); // Simpan nilai dalam stack sementara
+        InsertNode(&(*BT), isi); // Insert ke dalam tree untuk diproses lagi
         printf("%d ", isi);
     }
     
@@ -287,12 +288,12 @@ void riwayatSort(StackList *S)
     
     fprintf(file, "Waktu sort: %02d-%02d-%d %02d:%02d:%02d\n", day, month, year, hour, minute, second);
    
-	
+	fprintf(file, "Hasil sort:");
     while ( !StackListEmpty(*S))
     {
         Pop(S, &isi);
         Push(&tempStack, isi); // Simpan nilai dalam stack sementara
-        fprintf(file, "Hasil sort: %d\n", isi);
+        fprintf(file, " %d", isi);
        
     }
     fprintf(file, "\n");
