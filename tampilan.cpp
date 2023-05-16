@@ -77,7 +77,7 @@ void Mulai(int batas, int tes[]) {
 	printf("Nilai bilangan ke-%d: ", j+1);
 		scanf("%d", &tes[j]);
 		InsertNode(&myTree, tes[j]);
-		printf("Bilangan %d telah diinsert\n\n", tes[j]);
+		printf("**Bilangan %d telah diinsert**\n\n\n", tes[j]);
 	}
 
 	system("pause");
