@@ -136,6 +136,11 @@ void PilihSort(BinTree *BT, StackList *S)
 void LastMenu (BinTree *BT, StackList *S) {
 	char opsi;
 	start:
+	system("cls");
+	DisplayAwal();
+	printf("\n\nData: ");
+	PrintTree(*BT);
+	printf("\n\n==================================");
 	printf("\n\nMenu: \n");
 	printf("1. Urutkan lagi\n");
 	printf("2. Tambahkan bilangan\n");

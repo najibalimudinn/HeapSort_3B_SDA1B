@@ -45,17 +45,16 @@ void InsertNode (BinTree *BT, int X)
 		Dequeue (&Q, &isi);
 		printf("\n====================================================================================\n");
 		printf("**Dealloc node %d dari Queue**\n\n", Info(temp));
-		printf("Node saat ini:\n");
-		printf("%d\n", Info(temp));
+		printf("Node saat ini: %d\n", Info(temp));
 		if (Left(temp) != Nil)
 		{
-			printf("Node %d mempunyai anak kiri yaitu %d\n", Info(temp), Info(Left(temp)));
+			printf("\nNode %d mempunyai anak kiri yaitu %d\n", Info(temp), Info(Left(temp)));
 			Enqueue(&Q, Left(temp));
-			printf("**Memasukkan anak kiri dari node %d ke Queue**", Info(temp));
+			printf("**Memasukkan anak kiri dari node %d ke Queue**\n", Info(temp));
 		}
 		else
 		{
-			printf("Node %d tidak mempunyai anak kiri, maka %d akan di-insert menjadi anak kiri", Info(temp), X);
+			printf("\nNode %d tidak mempunyai anak kiri, maka %d akan di-insert menjadi anak kiri\n", Info(temp), X);
 			printf("====================================================================================\n");
 			Left(temp) = CreateNode(X);
 			LastChild(*BT) = Left(temp);
@@ -64,9 +63,9 @@ void InsertNode (BinTree *BT, int X)
 		
 		if (Right(temp) != Nil)
 		{
-			printf("Node %d mempunyai anak kanan yaitu %d\n", Info(temp), Info(Right(temp)));
+			printf("\nNode %d mempunyai anak kanan yaitu %d\n", Info(temp), Info(Right(temp)));
 			Enqueue(&Q, Right(temp));
-			printf("**Memasukkan anak kanan dari node %d ke Queue**", Info(temp));
+			printf("**Memasukkan anak kanan dari node %d ke Queue**\n", Info(temp));
 		}
 		else
 		{
@@ -86,7 +85,9 @@ void AscHeapSort (BinTree *BT, StackList *S)
 		system("cls");
 		printf("## Proses HeapSort secara Ascending ##");
 		BuildMaxHeap(&(Root(*BT)));
-		printf("\n\n**Node Root dan LastChild ditukar, kemudian LastChild akan dihapus dan dimasukkan ke dalam Stack**");
+		printf("\nData pada Tree: ");
+		PrintTree(*BT);
+		printf("\n\n**Node Root dan LastChild ditukar, kemudian LastChild akan dihapus dan dimasukkan ke dalam Stack**\n\n");
 		DeleteNode(&(*BT), &(*S));
 		system("pause");
 	}
@@ -99,6 +100,8 @@ void DescHeapSort (BinTree *BT, StackList *S)
 		system("cls");
 		printf("## Proses HeapSort secara Descending ##");
 		BuildMinHeap(&(Root(*BT)));
+		printf("\nData pada Tree: ");
+		PrintTree(*BT);
 		printf("\n\n**Node Root dan LastChild ditukar, kemudian LastChild akan dihapus dan dimasukkan ke dalam Stack**\n\n");
 		DeleteNode(&(*BT), &(*S));
 		system("pause");
@@ -145,7 +148,14 @@ void MaxHeapify (nodeTree *node)
 	
 	if (largestNode != *node)
 	{
-		printf("Node parent yaitu %d, lebih kecil daripada anak kanannya(%d) atau anak kirinya(%d)", Info(*node), Info(Right(*node)), Info(Left(*node)));
+		if (Left(*node) != Nil && Right(*node) != Nil) {
+			printf("Node parent yaitu %d, lebih kecil daripada anak kanannya(%d) atau anak kirinya(%d)", Info(*node), Info(Right(*node)), Info(Left(*node)));
+		} else if (Left(*node) != Nil) {
+			printf("Node parent yaitu %d, lebih kecil daripada anak kirinya(%d)", Info(*node), Info(Left(*node)));
+		} else {
+			printf("Node parent yaitu %d, lebih kecil daripada anak kanannya(%d)", Info(*node), Info(Right(*node)));
+		}
+		
 		printf("\nDilakukan swap antara parent dan anaknya.\n\n");
 		Swap(&(Info(*node)), &(Info(largestNode)));
 	} else {
@@ -176,9 +186,17 @@ void MinHeapify (nodeTree *node)
 	
 	if (smallestNode != *node)
 	{
-		printf("Node parent yaitu %d, lebih besar daripada anak kanannya(%d) atau anak kirinya(%d)", Info(*node), Info(Right(*node)), Info(Left(*node)));
+		if (Left(*node) != Nil && Right(*node) != Nil) {
+			printf("Node parent yaitu %d, lebih kecil daripada anak kanannya(%d) atau anak kirinya(%d)", Info(*node), Info(Right(*node)), Info(Left(*node)));
+		} else if (Left(*node) != Nil) {
+			printf("Node parent yaitu %d, lebih kecil daripada anak kirinya(%d)", Info(*node), Info(Left(*node)));
+		} else {
+			printf("Node parent yaitu %d, lebih kecil daripada anak kanannya(%d)", Info(*node), Info(Right(*node)));
+		}
 		printf("\nDilakukan swap antara parent dan anaknya.");
 		Swap(&(Info(*node)), &(Info(smallestNode)));
+	} else {
+		printf("\nTidak dilakukan swap.\n\n");
 	}
 }
 
