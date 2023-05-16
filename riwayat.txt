@@ -1,14 +1,42 @@
-Waktu sort: 16-05-2023 02:27:16
-Hasil sort: 1 12 33 43
-Waktu sort: 16-05-2023 08:16:58
-Hasil sort: 32 12 11 10
-Waktu sort: 16-05-2023 08:18:01
-Hasil sort: 43 23 11 -1
-Waktu sort: 16-05-2023 08:18:57
-Hasil sort: -1 11 23 43 43 23 11 -1
-Waktu sort: 16-05-2023 08:19:21
-Hasil sort: -1 -1 11 11 21 23 23 32 43 43 43 55 -1 11 23 43 43 23 11 -1
-Waktu sort: 16-05-2023 08:20:04
-Hasil sort: 2 4
-Waktu sort: 16-05-2023 12:04:57
-Hasil sort: 0 3 12 32 44
+Waktu sort: 16-05-2023 14:00:05
+Hasil sort: 20 12 9
+
+Waktu sort: 16-05-2023 14:00:22
+Hasil sort: 7 9 11 12 20
+
+Waktu sort: 16-05-2023 14:33:50
+Hasil sort: 4 13 22 56 66
+
+Waktu sort: 16-05-2023 14:36:05
+Hasil sort: 66 56 32 22 21 13 4
+
+Waktu sort: 16-05-2023 14:44:41
+Hasil sort: 21 25 34
+
+Waktu sort: 16-05-2023 14:55:32
+Hasil sort: 14 21 34
+
+Waktu sort: 16-05-2023 14:56:14
+Hasil sort: 45 27 23
+
+Waktu sort: 16-05-2023 14:57:47
+Hasil sort: 21 34 46
+
+Waktu sort: 16-05-2023 18:50:51
+Hasil sort: 22 35 56
+
+Waktu sort: 16-05-2023 18:51:27
+Hasil sort: 98 56 47 35 22 12
+
+Waktu sort: 16-05-2023 18:52:43
+Hasil sort: 21 45 56
+
+Waktu sort: 16-05-2023 18:53:11
+Hasil sort: 21 45 78
+
+Waktu sort: 16-05-2023 18:53:28
+Hasil sort: 78 45 21
+
+Waktu sort: 16-05-2023 19:01:08
+Hasil sort: 26 45 78
+

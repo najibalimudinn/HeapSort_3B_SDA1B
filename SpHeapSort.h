@@ -11,6 +11,7 @@
 #define Root(B) (B).root
 #define LastChild(B) (B).lastChild
 
+const char *namaFile = "riwayat.txt";
 typedef struct tElmtTree *nodeTree;
 typedef struct tElmtTree {
 	int info;
@@ -53,6 +54,8 @@ nodeTree FindParent (nodeTree BT, nodeTree node);
 void PrintTree (BinTree BT);
 
 void riwayatSort( StackList *S);
+
+void lihatRiwayatSort(const char *namaFile );
 
 
 

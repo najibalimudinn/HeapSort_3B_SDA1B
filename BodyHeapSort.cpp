@@ -83,7 +83,7 @@ void AscHeapSort (BinTree *BT, StackList *S)
 	while (Root(*BT) != Nil)
 	{
 		system("cls");
-		printf("## Proses HeapSort secara Ascending ##");
+		printf("## Proses HeapSort secara Ascending ##\n");
 		BuildMaxHeap(&(Root(*BT)));
 		printf("\nData pada Tree: ");
 		PrintTree(*BT);
@@ -98,7 +98,7 @@ void DescHeapSort (BinTree *BT, StackList *S)
 	while (Root(*BT) != Nil)
 	{
 		system("cls");
-		printf("## Proses HeapSort secara Descending ##");
+		printf("## Proses HeapSort secara Descending ##\n");
 		BuildMinHeap(&(Root(*BT)));
 		printf("\nData pada Tree: ");
 		PrintTree(*BT);
@@ -161,6 +161,7 @@ void MaxHeapify (nodeTree *node)
 	} else {
 		printf("\nTidak dilakukan swap.\n\n");
 	}
+	
 }
 
 void MinHeapify (nodeTree *node)
@@ -240,25 +241,25 @@ void Swap (int *info1, int *info2)
 
 void PrintInfo(BinTree *BT, StackList *S)
 {
-    StackList tempStack;
-    CreateStackList(&tempStack); // Buat stack sementara
+//    StackList tempStack;
+//    CreateStackList(&tempStack); // Buat stack sementara
     
     int isi;
     printf("\n\nData Terurut: ");
+    	printf("\n");
     while (!StackListEmpty(*S))
     {
         Pop(&(*S), &isi);
-        Push(&tempStack, isi); // Simpan nilai dalam stack sementara
+        //Push(&tempStack, isi); // Simpan nilai dalam stack sementara
         InsertNode(&(*BT), isi); // Insert ke dalam tree untuk diproses lagi
         printf("%d ", isi);
     }
-    
     // Kembalikan nilai ke stack asli
-    while (!StackListEmpty(tempStack))
-    {
-        Pop(&tempStack, &isi);
-        Push(S, isi);
-    }
+//    while (!StackListEmpty(tempStack))
+//    {
+//        Pop(&tempStack, &isi);
+//        Push(S, isi);
+//    }
 }
 
 
@@ -273,7 +274,7 @@ nodeTree FindParent (nodeTree path, nodeTree search)
 }
 
 void PrintTree (BinTree BT)
-{
+{	
 	QueueList Q;
 	CreateQueueList (&Q);
 	nodeTree temp, isi;
@@ -282,7 +283,9 @@ void PrintTree (BinTree BT)
 		printf("**Data masih kosong!**");
 		return;
 	}
+	printf("\n");
 	printf("%d ", Info(Root(BT)));
+	
 	Enqueue (&Q, Root(BT));
 	while (First(Q) != Nil)
 	{
@@ -290,14 +293,15 @@ void PrintTree (BinTree BT)
 		Dequeue (&Q, &isi);
 		
 		if (Left(temp) != Nil)
-		{
+		{	
 			printf("%d ", Info(Left(temp)));
 			Enqueue(&Q, Left(temp));
 		}
 		else
 		{
 			return;
-		}
+		}	
+			
 		
 		if (Right(temp) != Nil)
 		{
@@ -308,6 +312,7 @@ void PrintTree (BinTree BT)
 		{
 			return;
 		}
+			
 	}
 }
 
@@ -345,7 +350,7 @@ void riwayatSort(StackList *S)
         fprintf(file, " %d", isi);
        
     }
-    fprintf(file, "\n");
+    fprintf(file, "\n\n");
     
     // Kembalikan nilai ke stack asli
     while (!StackListEmpty(tempStack))
@@ -355,6 +360,24 @@ void riwayatSort(StackList *S)
     }
     
     fclose(file);
+}
+
+void lihatRiwayatSort(const char *namaFile )
+{
+	
+	FILE *file = fopen(namaFile, "r");
+    if (file == NULL) {
+        printf("Gagal membuka file.\n");
+        return;
+    }
+    
+    char buffer[256];
+    while (fgets(buffer, sizeof(buffer), file) != NULL) {
+        printf("%s", buffer);
+    }
+    
+    fclose(file);
+	
 }
 
 

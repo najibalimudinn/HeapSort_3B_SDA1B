@@ -130,11 +130,17 @@ void PilihSort(BinTree *BT, StackList *S)
 		getch();
 		goto start;
 	}
+	system("cls");
 	LastMenu(&(*BT), &(*S));
 }
 
 void LastMenu (BinTree *BT, StackList *S) {
+	
+	
 	char opsi;
+	while(opsi!=4){
+	
+	
 	start:
 	system("cls");
 	DisplayAwal();
@@ -144,7 +150,8 @@ void LastMenu (BinTree *BT, StackList *S) {
 	printf("\n\nMenu: \n");
 	printf("1. Urutkan lagi\n");
 	printf("2. Tambahkan bilangan\n");
-	printf("3. Keluar\n\n");
+	printf("3. Riwayat\n");
+	printf("4. Keluar\n\n");
 	printf("Pilihan: ");
 	scanf(" %c", &opsi);
 	
@@ -171,8 +178,14 @@ void LastMenu (BinTree *BT, StackList *S) {
 		PilihSort(&(*BT), &(*S));
 	}
 	else if (opsi == '3')
+	{	
+		system("cls");
+		lihatRiwayatSort(namaFile);	
+		system("pause");
+	}
+	else if(opsi == '4')
 	{
-		exit(0);
+			exit(0);
 	}
 	else
 	{
@@ -180,4 +193,5 @@ void LastMenu (BinTree *BT, StackList *S) {
 		getch();
 		goto start;
 	}
+  }
 }

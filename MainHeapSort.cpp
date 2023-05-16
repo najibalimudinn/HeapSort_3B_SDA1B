@@ -4,7 +4,7 @@
 
 int main()
 {
-	
+	const char *namaFile = "riwayat.txt";
 	char opsi, hb[15];
 	char message[] = "Inputkan jumlah angka dan nilai setiap masing-masing angka, program akan mengurutkan nilai angka secara ascending/descending.";
     int speed = 100; // 0.1 detik
